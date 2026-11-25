@@ -1,16 +1,16 @@
-"""news-image-20261125 entry (Python 3.13, standard library only).
+# Entry point for the 25 November 2026 news-image bounty.
+# The grader runs this file with Python 3.13 and expects entry.png
+# to appear in the output folder. The picture itself is committed
+# next to this script, so all we do here is copy it across.
+# Local test:  mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 
-Copies the image beside this file to the grader's output directory.
-Outside the grader, MAKEFUN_OUTPUT_DIR stands in for /output:
-    mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
-"""
 import os
 import shutil
+from pathlib import Path
 
-HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "entry.png")
-OUT_DIR = os.environ.get("MAKEFUN_OUTPUT_DIR") or "/output"
+base = Path(__file__).resolve().parent
+picture = base / "entry.png"
+target_dir = Path(os.environ.get("MAKEFUN_OUTPUT_DIR", "/output"))
 
-# Copy only: no network, no randomness, so repeated runs are byte-identical.
-os.makedirs(OUT_DIR, exist_ok=True)
-shutil.copyfile(SRC, os.path.join(OUT_DIR, "entry.png"))
+target_dir.mkdir(parents=True, exist_ok=True)
+shutil.copyfile(picture, target_dir / "entry.png")

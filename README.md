@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/news-image-20261125/zhaojiaboyi/makefun-news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![reward](https://make.fun/badge/news-image-20261125/zhaojiaboyi/makefun-news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
-A program that writes one image summing up the world's news of Wednesday 25 November 2026 — six stories, from Hormuz to Tiangong, drawn by code with Pillow. Run main.py and it copies entry.png to the output directory.
+One picture for Wednesday 25 November 2026: six of the day's biggest stories — Hormuz tanker mines, Pakistan's first astronaut reaching Tiangong, new US tariffs, the Australia–Solomons treaty, Ukrainian strikes on Russian refineries, and Asia's market plunge — drawn entirely with Pillow shapes and text, no photographs. `main.py` copies the finished `entry.png` into the grader's output folder; `gen_image.py` is the script that draws it.
 
 ## Run it
 
